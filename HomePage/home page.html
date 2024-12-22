@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="javaScript.js"></script>
+	<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+		button{
+			margin-top: 6px;
+			background-color: skyblue;
+			border: solid skyblue;
+		}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: deepskyblue;
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+</style>
+</head>
+<body>
+	<div id="navbar">
+	  	<a href="#default" id="logo">Students' Essentials</a>
+	  	<span>
+	  	<a href="#" class="active cool-link">Home</a>
+	  	</span>
+		<a href="#" class="cool-link">MYUIT</a>
+		<a href="#" class="cool-link">About</a>
+		<a href="#" class="cool-link">Calendar</a>
+		<a href="#" class="cool-link">Shuttle</a>
+		<a href="#" class="cool-link">Timetable</a>
+		<div id="navbar-right">
+	  	<button id="myBtn"><img src="images/noti.png" alt="Notification" width="31"></button>
+	  	<a href="To Do List.html"><img src="images/note.png"></a>
+		<a href="#">	<img src="images/reminder.png"></a>
+		
+
+
+		</div>
+ 	 </div>
+	<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Modal Header</h2>
+    </div>
+    <div class="modal-body">
+      <p>Some text in the Modal Body</p>
+      <p>Some other text...</p>
+    </div>
+    <div class="modal-footer">
+      <h3>Modal Footer</h3>
+    </div>
+  </div>
+
+</div>
+	<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+	  	
+	<div class="content">
+		
+		<img src="images/UiT&BlueSky.png" alt="Campus" class="UIT" style="width:100%">
+		<div class="middle">
+			<div class="text">UIT</div>
+		</div>
+	</div>
+	<div class="container">
+			<table>
+				<tr>
+					<td>
+					<div class="content-1">
+						<img src="images/students.jpg" class="image-1">
+						<h3>Do you want to know about the students more?</h3>
+						<p>Don't worry if you are a junior. You can talk to each other and be friend with anyone else</p>
+						<button class="button btn-1"><a href="#">Visit</a></button>
+					</div>
+					</td>
+					<td>
+					<div class="content-2">
+						<img src="images/events.jpg">
+						<h3>Stay free and enjoy your memorable student life!</h3>
+						<p>Hating school when you are in it is normal but once you leave you will surely miss it then.</p>
+						<button class="button btn-2"><a href="#">Visit</a></button>
+					</div>
+					</td>
+					<td>
+					<div class="content-3">
+						<img src="images/graduation.jpg">
+						<h3>Follow your hobby to make your dream do come ture!</h3>
+						<p>Sometimes, your school is the only place where you can truly show who you are, be true.</p>
+						<button class="button btn-3"><a href="#">Visit</a></button>
+					</div>
+					</td>
+				</tr>
+			</table>
+	</div>
+	<div class="Events">
+		<h1>UIT Events</h1>
+		<table>
+			<tr>
+				<td>
+				<div class="event-1">
+					<img src="images/blood donation.jpg">
+					<h2 class="date">
+						Jul 15
+					</h2>
+					<p>
+						Blood Donation <br>
+						Place : Library <br>
+						<span>Time : 9:00 AM</span>
+					</p>
+				</div>
+				</td>
+				<td>
+				<div class="event-2">
+					<img src="images/MSC.jpg">
+					<h2 class="date">
+						Jul 24
+					</h2>
+					<p>
+						Mask Singing Contest <br>
+						Place : Room 215	<br>
+						<span>Time : 1:00 PM</span>
+					</p>
+				</div>
+				</td>
+				<td>
+				<div class="event-3">	
+					<img src="">
+					<h2 class="date">
+						Aug 24
+					</h2>
+					<p>
+						Open Campus <br>
+						Place : UIT <br>
+						<span>Time : 10:00 AM</span>
+					</p>
+				</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<footer>
+		<img src="images/get ride.jpg" style="width:250px; height:120px; margin-left:40px; margin-top:15px;">
+		<img src="images/klab.png" style="width:250px; height:120px; margin-left:200px;" >
+		<img src="images/unistar.png"  style="width:250px; height:120px; margin-left:200px;"  >
+		<p>
+			Copyright &copy; 2019, UIT
+			<span>Source:University of Information Technology</span>
+		</p>
+	</footer>
+</body>
+</html>	 
